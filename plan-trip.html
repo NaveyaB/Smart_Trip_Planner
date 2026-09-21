@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan Your Trip | Smart Budget Trip Planner</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="plan-trip.css">
+
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="page-background"></div>
+<div class="background-overlay"></div>
+
+
+<!-- HEADER -->
+
+<header class="top-header">
+
+    <div class="logo">
+
+        <div class="logo-circle">
+            <i class="fa-solid fa-route"></i>
+        </div>
+
+        <div class="logo-text">
+            <h2>Smart Budget</h2>
+            <span>Trip Planner</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="planner-wrapper">
+
+
+    <!-- LEFT SIDE -->
+
+    <section class="intro-section">
+
+        <div class="intro-badge">
+
+            <i class="fa-regular fa-compass"></i>
+
+            PLAN LESS. TRAVEL MORE.
+
+        </div>
+
+
+        <h1>
+            Plan Your
+            <span>Perfect Trip</span>
+        </h1>
+
+
+        <p class="intro-description">
+
+            Tell us your preferences and we'll create
+            the best budget-friendly itinerary for you.
+
+        </p>
+
+
+        <div class="feature-list">
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <h3>Explore Best Places</h3>
+                    <p>Handpicked destinations in Tamil Nadu</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <div>
+                    <h3>Stay Within Budget</h3>
+                    <p>Smart planning for your budget</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <div>
+                    <h3>Hassle Free Planning</h3>
+                    <p>We plan, you enjoy the journey</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FORM -->
+
+    <section class="glass-form">
+
+
+        <div class="form-header">
+
+            <div class="form-title-icon">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+
+            <div>
+
+                <h2>Plan Your Trip</h2>
+
+                <p>Fill in your trip details to get started</p>
+
+            </div>
+
+        </div>
+
+
+
+        <form id="tripForm">
+
+
+            <!-- ROW 1 -->
+
+            <div class="form-grid">
+
+
+                <!-- DISTRICT -->
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Select District
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <input
+                            type="text"
+                            id="district"
+                            list="districtList"
+                            placeholder="Search your destination..."
+                            required
+                        >
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                    <datalist id="districtList">
+
+                        <option value="Ariyalur">
+                        <option value="Chengalpattu">
+                        <option value="Chennai">
+                        <option value="Coimbatore">
+                        <option value="Cuddalore">
+                        <option value="Dharmapuri">
+                        <option value="Dindigul">
+                        <option value="Erode">
+                        <option value="Kallakurichi">
+                        <option value="Kancheepuram">
+                        <option value="Kanyakumari">
+                        <option value="Karur">
+                        <option value="Krishnagiri">
+                        <option value="Madurai">
+                        <option value="Mayiladuthurai">
+                        <option value="Nagapattinam">
+                        <option value="Namakkal">
+                        <option value="Nilgiris">
+                        <option value="Perambalur">
+                        <option value="Pudukkottai">
+                        <option value="Ramanathapuram">
+                        <option value="Ranipet">
+                        <option value="Salem">
+                        <option value="Sivagangai">
+                        <option value="Tenkasi">
+                        <option value="Thanjavur">
+                        <option value="Theni">
+                        <option value="Thoothukudi">
+                        <option value="Tiruchirappalli">
+                        <option value="Tirunelveli">
+                        <option value="Tirupathur">
+                        <option value="Tiruppur">
+                        <option value="Tiruvallur">
+                        <option value="Tiruvannamalai">
+                        <option value="Tiruvarur">
+                        <option value="Vellore">
+                        <option value="Viluppuram">
+                        <option value="Virudhunagar">
+
+                    </datalist>
+
+                </div>
+
+
+
+                <!-- PERSONS -->
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-users"></i>
+                        Number of Persons
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <input
+                            type="number"
+                            id="persons"
+                            min="1"
+                            placeholder="How many people?"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROW 2 -->
+
+            <div class="form-grid">
+
+
+                <!-- BUDGET -->
+
+                <div class="input-box budget-section">
+
+                    <label>
+                        <i class="fa-solid fa-wallet"></i>
+                        Travel Budget
+                    </label>
+
+
+                    <!-- ENTER AMOUNT -->
+
+                   <div class="amount-input-wrapper">
+
+    <span class="rupee-symbol">₹</span>
+
+    <input
+        type="number"
+        id="budgetInput"
+        name="budget"
+        value="5000"
+        min="1000"
+        max="50000"
+        step="500"
+        placeholder="Enter your budget"
+    >
+
+</div>
+
+
+                    <!-- SINGLE SLIDER -->
+
+                    <input
+                        type="range"
+                        id="budgetSlider"
+                        min="500"
+                        max="50000"
+                        step="500"
+                        value="500"
+                    >
+
+
+                    <div class="budget-range">
+
+                        <span>₹500</span>
+
+                        <span>₹50,000</span>
+
+                    </div>
+
+
+                    <!-- BUDGET TYPE -->
+
+                    <span
+                        id="budgetLabel"
+                        class="budget-label"
+                    >
+                        Enter your budget
+                    </span>
+
+                </div>
+
+
+
+                <!-- DAYS -->
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-regular fa-calendar"></i>
+                        Number of Days
+                    </label>
+
+                    <div class="input-wrapper select-wrapper">
+
+                        <select id="days" required>
+
+                            <option value="" selected disabled>
+                                Select duration
+                            </option>
+
+                            <option value="1">1 Day</option>
+                            <option value="2">2 Days</option>
+                            <option value="3">3 Days</option>
+                            <option value="4">4 Days</option>
+                            <option value="5">5 Days</option>
+                            <option value="6">6 Days</option>
+                            <option value="7">7 Days</option>
+
+                        </select>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROW 3 -->
+
+            <div class="form-grid">
+
+
+                <!-- DATE -->
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-regular fa-calendar-days"></i>
+                        Journey Starts On
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <input
+                            type="date"
+                            id="travelDate"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TRANSPORT -->
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-bus"></i>
+                        Transport Mode
+                    </label>
+
+
+                    <div class="choice-grid transport-choice">
+
+
+                        <label class="choice-card">
+
+                            <input
+                                type="radio"
+                                name="transport"
+                                value="Bus"
+                            >
+
+                            <i class="fa-solid fa-bus"></i>
+                            <span>Bus</span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input
+                                type="radio"
+                                name="transport"
+                                value="Train"
+                            >
+
+                            <i class="fa-solid fa-train"></i>
+                            <span>Train</span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input
+                                type="radio"
+                                name="transport"
+                                value="Car"
+                            >
+
+                            <i class="fa-solid fa-car"></i>
+                            <span>Car</span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input
+                                type="radio"
+                                name="transport"
+                                value="Bike"
+                            >
+
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <span>Bike</span>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROW 4 -->
+
+            <div class="form-grid">
+
+
+                <!-- STAY -->
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-bed"></i>
+                        Stay Preference
+                    </label>
+
+
+                    <div class="input-wrapper select-wrapper">
+
+                        <select id="stay" required>
+
+                            <option value="" selected disabled>
+                                Choose stay type
+                            </option>
+
+                            <option value="Hotel">Hotel</option>
+                            <option value="Resort">Resort</option>
+                            <option value="Homestay">Homestay</option>
+                            <option value="No Stay">No Stay</option>
+
+                        </select>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD -->
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-utensils"></i>
+                        Food Preference
+                    </label>
+
+
+                    <div class="choice-grid food-choice">
+
+
+                        <label class="choice-card">
+
+                            <input
+                                type="radio"
+                                name="food"
+                                value="Veg"
+                            >
+
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>Veg</span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input
+                                type="radio"
+                                name="food"
+                                value="Non-Veg"
+                            >
+
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                            <span>Non-Veg</span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input
+                                type="radio"
+                                name="food"
+                                value="Both"
+                            >
+
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                            <span>Both</span>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TRIP TYPE -->
+
+            <div class="input-box trip-type">
+
+                <label>
+                    <i class="fa-solid fa-user-group"></i>
+                    Trip Type
+                </label>
+
+
+                <div class="choice-grid trip-choice">
+
+
+                    <label class="choice-card">
+
+                        <input
+                            type="radio"
+                            name="trip_type"
+                            value="Solo"
+                        >
+
+                        <i class="fa-solid fa-user"></i>
+                        <span>Solo</span>
+
+                    </label>
+
+
+                    <label class="choice-card">
+
+                        <input
+                            type="radio"
+                            name="trip_type"
+                            value="Friends"
+                        >
+
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>Friends</span>
+
+                    </label>
+
+
+                    <label class="choice-card">
+
+                        <input
+                            type="radio"
+                            name="trip_type"
+                            value="Family"
+                        >
+
+                        <i class="fa-solid fa-people-roof"></i>
+                        <span>Family</span>
+
+                    </label>
+
+
+                    <label class="choice-card">
+
+                        <input
+                            type="radio"
+                            name="trip_type"
+                            value="Couple"
+                        >
+
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Couple</span>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="generate-btn"
+            >
+
+                <span>Generate My Trip</span>
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="plan-trip.js"></script>
+
+</body>
+</html>

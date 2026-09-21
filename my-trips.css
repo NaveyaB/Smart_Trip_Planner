@@ -1,0 +1,284 @@
+
+/* =========================================================
+   FINAL MY TRIPS LOWER SECTION OVERRIDE
+   Keep your existing my-trips.css unchanged.
+   This file creates the floating, premium visual shown in
+   the final design concept.
+========================================================= */
+
+:root{
+    --final-deep:#0d2f28;
+    --final-green:#1f6b57;
+    --final-mint:#a8e6cf;
+    --final-cream:#f6f1e7;
+    --final-night:#182522;
+    --final-gold:#e7b66a;
+}
+
+.main-content,
+.trip-main,
+main{
+    position:relative;
+}
+
+.day-budget-area{
+    display:flex;
+    justify-content:center;
+    margin:28px 0 18px;
+}
+
+.floating-budget-btn{
+    width:min(100%,620px);
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    text-align:left;
+    padding:18px 22px;
+    border-radius:24px;
+    background:linear-gradient(135deg,#0d2f28,#1f6b57);
+    box-shadow:0 18px 40px rgba(13,47,40,.28), inset 0 1px rgba(255,255,255,.18);
+    animation:softFloat 4s ease-in-out infinite;
+    transition:.35s ease;
+}
+
+.floating-budget-btn:hover,
+.floating-budget-btn.active-glow{
+    transform:translateY(-7px) scale(1.015);
+    box-shadow:0 0 0 6px rgba(168,230,207,.12),0 22px 52px rgba(31,107,87,.38);
+}
+
+.budget-trigger-icon{
+    width:52px;height:52px;border-radius:18px;
+    display:grid;place-items:center;
+    background:rgba(255,255,255,.15);
+    font-size:21px;
+}
+
+.budget-trigger-text{display:grid;gap:3px;flex:1}
+.budget-trigger-text small{font-size:10px;letter-spacing:1.4px;color:#bdebdc}
+.budget-trigger-text strong{font-size:17px}
+.budget-trigger-text em{font-size:12px;color:#d5eee7;font-style:normal}
+.budget-trigger-arrow{font-size:18px}
+
+.continue-day-card{
+    width:100%;
+    border:0;
+    cursor:pointer;
+    margin:22px 0 42px;
+    padding:20px 24px;
+    border-radius:26px;
+    color:#fff;
+    text-align:left;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:linear-gradient(135deg,#183b33,#0e211d);
+    box-shadow:0 18px 45px rgba(11,38,31,.20);
+    transition:.35s ease;
+    overflow:hidden;
+    position:relative;
+}
+
+.continue-day-card::after{
+    content:"";
+    position:absolute;
+    width:180px;height:180px;
+    right:-70px;top:-90px;
+    border-radius:50%;
+    background:rgba(168,230,207,.10);
+}
+
+.continue-day-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 0 5px rgba(168,230,207,.10),0 22px 55px rgba(11,38,31,.28);
+}
+
+.continue-day-orb{
+    width:56px;height:56px;border-radius:50%;
+    display:grid;place-items:center;
+    background:linear-gradient(135deg,#bdebdc,#4ea886);
+    color:#12352d;font-size:21px;
+    box-shadow:0 0 28px rgba(168,230,207,.35);
+    flex:0 0 auto;
+}
+
+.continue-day-copy{display:grid;gap:4px;flex:1}
+.continue-day-copy small{color:#9fd8c7;font-size:10px;letter-spacing:1.3px}
+.continue-day-copy strong{font-size:19px}
+.continue-day-copy em{font-style:normal;color:#c6dcd6;font-size:12px}
+
+.continue-day-arrow{
+    position:relative;z-index:1;
+    display:flex;align-items:center;gap:9px;
+    color:#bdebdc;font-size:13px;font-weight:800;
+}
+
+.final-right-column{
+    display:grid;
+    gap:22px;
+}
+
+.final-right-column .side-card,
+.final-bottom-grid .recommend-card{
+    border:1px solid rgba(31,107,87,.13);
+    background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(246,241,231,.96));
+    box-shadow:0 16px 40px rgba(22,59,50,.10);
+    border-radius:26px;
+}
+
+.glow-card{
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.glow-card:hover,
+.glow-card.active-glow{
+    transform:translateY(-7px);
+    box-shadow:0 0 0 5px rgba(168,230,207,.14),0 24px 55px rgba(31,107,87,.20);
+}
+
+.trip-actions-card{padding:24px}
+.trip-actions-card h3,
+.hospital-card h3,
+.safety-card h3,
+.quick-actions-final h3{
+    color:var(--final-deep);
+    margin:7px 0 8px;
+}
+
+.actions-subtitle{color:#63756f;font-size:13px;line-height:1.7}
+
+.trip-action-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:18px;
+}
+
+.trip-action-btn{
+    border:0;
+    cursor:pointer;
+    border-radius:18px;
+    min-height:105px;
+    display:grid;
+    place-items:center;
+    align-content:center;
+    gap:6px;
+    color:#12352d;
+    background:#eef7f2;
+    transition:.3s ease;
+}
+
+.trip-action-btn i{font-size:22px}
+.trip-action-btn span{font-weight:800;font-size:12px}
+.trip-action-btn small{font-size:10px;color:#6b817a}
+.trip-action-btn:hover{transform:translateY(-5px);filter:brightness(.98);box-shadow:0 14px 30px rgba(31,107,87,.15)}
+.whatsapp-action{background:#e7f8ed}
+.pdf-action{background:#f8eee9}
+.copy-action{background:#edf4f2}
+
+.save-trip-status{
+    margin-top:14px;
+    padding:11px 13px;
+    border-radius:14px;
+    color:#23654f;
+    background:#e8f5ee;
+    font-size:12px;
+}
+
+.hospital-card{padding:24px}
+.hospital-content{display:flex;gap:14px;align-items:center;margin:12px 0 18px}
+.hospital-icon{
+    width:52px;height:52px;border-radius:17px;display:grid;place-items:center;
+    background:#edf7f2;color:#1f6b57;font-size:21px
+}
+.hospital-content p{margin:5px 0 0;color:#697c75;font-size:12px;line-height:1.6}
+.hospital-map-btn{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:14px 16px;border-radius:16px;text-decoration:none;
+    color:#fff;background:linear-gradient(135deg,#0d2f28,#26765f);
+    font-weight:800;font-size:12px;
+}
+
+.safety-card{padding:24px}
+.safety-top{display:flex;gap:13px;align-items:center;margin:10px 0 15px}
+.safety-icon{
+    width:50px;height:50px;border-radius:17px;display:grid;place-items:center;
+    background:#f8f0df;color:#a96e19;font-size:20px
+}
+.safety-top p{font-size:12px;color:#718078;margin:4px 0}
+.safety-points{display:grid;gap:10px}
+.safety-points div{display:flex;gap:9px;align-items:center;color:#51645d;font-size:12px}
+.safety-points i{color:#2d9471}
+
+.quick-actions-final{padding:24px}
+.quick-action-item{
+    display:flex;align-items:center;gap:12px;
+    padding:13px 0;
+    text-decoration:none;
+    color:#17352e;
+    border-bottom:1px solid rgba(31,107,87,.10);
+}
+.quick-action-item:last-child{border-bottom:0}
+.quick-action-item > span:nth-child(2){display:grid;gap:3px;flex:1}
+.quick-action-item strong{font-size:13px}
+.quick-action-item small{font-size:11px;color:#718078}
+.quick-action-icon{
+    width:43px;height:43px;border-radius:14px;display:grid;place-items:center;
+    background:#eef7f2;color:#246f58
+}
+.quick-action-item.emergency .quick-action-icon{background:#faeceb;color:#bd4d4d}
+
+.final-bottom-grid{
+    margin-top:24px;
+    margin-bottom:45px;
+}
+.final-bottom-grid .recommend-card{padding:25px}
+.shopping-preview-card{
+    background:linear-gradient(135deg,#f4efe4,#e7f1ec)!important;
+}
+.shopping-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin:18px 0;
+}
+.shopping-row div{
+    overflow:hidden;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 8px 22px rgba(22,59,50,.08);
+}
+.shopping-row img{width:100%;height:125px;object-fit:cover;display:block}
+.shopping-row span{display:block;padding:9px;font-size:11px;font-weight:800;color:#24473d}
+.shopping-link{display:inline-flex;align-items:center;gap:9px}
+
+@keyframes softFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+}
+
+@media (max-width:760px){
+    .trip-action-grid{grid-template-columns:1fr}
+    .trip-action-btn{min-height:72px;grid-template-columns:40px 1fr;place-items:center;text-align:center}
+    .shopping-row{grid-template-columns:repeat(2,1fr)}
+    .continue-day-card{align-items:flex-start}
+    .continue-day-arrow{display:none}
+}
+
+@media print{
+    .topbar,
+    .right-column,
+    .bottom-grid,
+    .day-tabs,
+    .day-budget-area,
+    .continue-day-card,
+    .trip-actions-card,
+    .hospital-card,
+    .safety-card,
+    .quick-actions-final{
+        display:none!important;
+    }
+}

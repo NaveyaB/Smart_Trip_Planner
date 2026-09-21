@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Smart Budget Trip Planner</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            <img src="image/WhatsApp Sticker 2026-08-09 at 1.23.12 PM" alt="Logo">
+        </div>
+
+        <h2>Login</h2>
+
+        <p class="subtitle">
+            Login to continue
+        </p>
+
+        <form action="login.php" method="POST">
+
+            <!-- Username / Email -->
+            <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    name="email"
+                    placeholder="Username"
+                    required>
+
+            </div>
+
+            <!-- Password -->
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required>
+
+            </div>
+
+            <!-- Remember -->
+            <div class="login-options">
+
+                <label>
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+
+                <a href="#">
+                    Forgot Password?
+                </a>
+
+            </div>
+
+            <!-- Login -->
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <!-- Register -->
+        <p class="register-text">
+
+            Don't have an account?
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </p>
+
+        <!-- Home -->
+        <a href="index.html" class="back-home">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Smart Budget Trip Planner</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="register.css">
+
+</head>
+
+<body>
+
+    <div class="register-box">
+
+        <!-- Logo -->
+        <div class="register-logo">
+            <img src="image/WhatsApp Sticker 2026-08-09 at 1.23.12 PM" alt="Logo">
+        </div>
+
+        <h2>Create Account</h2>
+
+        <p class="subtitle">
+            Register to start planning your trip
+        </p>
+
+
+        <!-- Register Form -->
+        <form action="./register.php" method="POST">
+
+            <!-- Username -->
+            <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    required>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required>
+
+            </div>
+
+
+            <!-- Confirm Password -->
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    required>
+
+            </div>
+
+
+            <!-- Register Button -->
+            <button type="submit" class="register-btn">
+                Register
+            </button>
+
+        </form>
+
+
+        <!-- Login -->
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+
+        <!-- Back Home -->
+        <a href="index.html" class="back-home">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

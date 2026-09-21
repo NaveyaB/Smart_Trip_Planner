@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Budget Trip Planner - Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <div class="brand-text">
+                    <h2>Smart Trip</h2>
+                    <span>Budget Planner</span>
+                </div>
+
+            </div>
+
+            <!-- Mobile close -->
+            <button
+                class="close-btn"
+                id="closeSidebar"
+                onclick="closeSidebarMenu()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="trip-form.html"
+               class="nav-item"
+               id="planTripNav">
+
+                <i class="fa-solid fa-suitcase-rolling"></i>
+
+                <span>Plan My Trip</span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>Explore Destinations</span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span>Saved Places</span>
+
+            </a>
+
+
+            <a href="#" class="nav-item">
+
+                <i class="fa-solid fa-map"></i>
+
+                <span>My Trips</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content" id="mainContent">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                onclick="toggleSidebar()">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="topbar-title">
+
+                Smart Budget Trip Planner
+
+            </div>
+
+
+            <div class="profile-mini">
+
+                <div class="profile-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <span id="topUserName">Traveler</span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             WELCOME
+        ====================================================== -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <span class="welcome-label">
+
+                    <i class="fa-solid fa-compass"></i>
+
+                    YOUR TRAVEL DASHBOARD
+
+                </span>
+
+
+                <h1>
+
+                    Good Evening,
+                    <span id="welcomeUserName">Traveler</span>
+
+                    <span class="wave">👋</span>
+
+                </h1>
+
+
+                <p id="welcomeMessage">
+
+                    Ready to discover your next destination?
+
+                </p>
+
+            </div>
+
+
+            <div class="welcome-decoration">
+
+                <i class="fa-solid fa-compass"></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BIG PLAN MY TRIP
+        ====================================================== -->
+
+        <section class="plan-trip-section">
+
+            <div class="plan-content">
+
+                <span class="section-tag">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    START YOUR JOURNEY
+
+                </span>
+
+
+                <h2>
+
+                    Plan Your Perfect Trip
+
+                </h2>
+
+
+                <p>
+
+                    Choose your destination, budget and travel
+                    preferences. Let us create a memorable trip
+                    for you.
+
+                </p>
+
+
+                <a
+                    href="trip-form.html"
+                    class="primary-btn"
+                    id="planTripBtn">
+
+                    Plan My Trip
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="plan-image-icon">
+
+                <i class="fa-solid fa-mountain-sun"></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TRAVEL OVERVIEW
+        ====================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="small-heading">
+                        YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Your Travel Overview
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="overview-grid">
+
+
+                <!-- CARD 1 -->
+
+                <div class="overview-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Trips Planned
+                        </span>
+
+                        <h3 id="tripsPlanned">
+                            04
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 2 -->
+
+                <div class="overview-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Saved Places
+                        </span>
+
+                        <h3 id="savedPlaces">
+                            08
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 3 -->
+
+                <div class="overview-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Places Explored
+                        </span>
+
+                        <h3 id="placesExplored">
+                            12
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 4 -->
+
+                <div class="overview-card">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span>
+                            Total Trips Budget
+                        </span>
+
+                        <h3 id="totalBudget">
+                            ₹12,500
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             THIS MONTH'S PICKS
+        ====================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="small-heading">
+                        TRAVEL PICKS
+                    </span>
+
+                    <h2>
+                        Best Places to Visit This Month
+                    </h2>
+
+                </div>
+
+                <span class="month-label">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    This Month
+
+                </span>
+
+            </div>
+
+
+
+            <div class="destination-grid">
+
+
+                <!-- KODAIKANAL -->
+
+                <article class="destination-card">
+
+                    <div class="destination-image kodaikanal">
+
+                        <div class="image-overlay"></div>
+
+
+                        <button class="heart-btn">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <div class="destination-title">
+
+                            <h3>Kodaikanal</h3>
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Dindigul District
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="destination-body">
+
+                        <p>
+                            Cool weather & scenic views
+                        </p>
+
+                        <button class="explore-btn">
+
+                            Explore
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- OOTY -->
+
+                <article class="destination-card">
+
+                    <div class="destination-image ooty">
+
+                        <div class="image-overlay"></div>
+
+
+                        <button class="heart-btn">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <div class="destination-title">
+
+                            <h3>Ooty</h3>
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Nilgiris
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="destination-body">
+
+                        <p>
+                            Perfect for a refreshing getaway
+                        </p>
+
+                        <button class="explore-btn">
+
+                            Explore
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- KANYAKUMARI -->
+
+                <article class="destination-card">
+
+                    <div class="destination-image kanyakumari">
+
+                        <div class="image-overlay"></div>
+
+
+                        <button class="heart-btn">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <div class="destination-title">
+
+                            <h3>Kanyakumari</h3>
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Tamil Nadu
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="destination-body">
+
+                        <p>
+                            Beautiful coastal experience
+                        </p>
+
+                        <button class="explore-btn">
+
+                            Explore
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- VALPARAI -->
+
+                <article class="destination-card">
+
+                    <div class="destination-image valparai">
+
+                        <div class="image-overlay"></div>
+
+
+                        <button class="heart-btn">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <div class="destination-title">
+
+                            <h3>Valparai</h3>
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Tamil Nadu
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="destination-body">
+
+                        <p>
+                            Nature & peaceful surroundings
+                        </p>
+
+                        <button class="explore-btn">
+
+                            Explore
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RECENT TRIPS
+        ====================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="small-heading">
+                        YOUR HISTORY
+                    </span>
+
+                    <h2>
+                        Your Recent Trips
+                    </h2>
+
+                </div>
+
+
+                <button class="view-all-btn">
+
+                    View All
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <div class="recent-trips">
+
+
+                <!-- TRIP 1 -->
+
+                <div class="trip-row">
+
+                    <div class="trip-place-icon">
+
+                        <i class="fa-solid fa-mountain"></i>
+
+                    </div>
+
+
+                    <div class="trip-info">
+
+                        <h3>
+                            Kodaikanal Trip
+                        </h3>
+
+                        <p>
+                            2 Days
+                            &nbsp; • &nbsp;
+                            ₹3,000
+                            &nbsp; • &nbsp;
+                            3 Members
+                        </p>
+
+                    </div>
+
+
+                    <button class="trip-view-btn">
+
+                        View Trip
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- TRIP 2 -->
+
+                <div class="trip-row">
+
+                    <div class="trip-place-icon">
+
+                        <i class="fa-solid fa-place-of-worship"></i>
+
+                    </div>
+
+
+                    <div class="trip-info">
+
+                        <h3>
+                            Palani Trip
+                        </h3>
+
+                        <p>
+                            1 Day
+                            &nbsp; • &nbsp;
+                            ₹1,500
+                            &nbsp; • &nbsp;
+                            2 Members
+                        </p>
+
+                    </div>
+
+
+                    <button class="trip-view-btn">
+
+                        View Trip
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TRAVEL INSPIRATION
+        ====================================================== -->
+
+        <section class="inspiration-section">
+
+            <div class="inspiration-content">
+
+                <span>
+
+                    <i class="fa-solid fa-compass"></i>
+
+                    TRAVEL INSPIRATION
+
+                </span>
+
+
+                <h2>
+                    Where will you go next?
+                </h2>
+
+
+                <p>
+
+                    Every journey begins with a single destination.
+                    Discover Tamil Nadu, one beautiful place at a time.
+
+                </p>
+
+
+                <button
+                    class="inspiration-btn"
+                    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+                    Start Exploring
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Smart Budget Trip Planner
+            </p>
+
+            <span>
+                Plan smarter • Travel better • Explore more
+            </span>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         DASHBOARD JS
+    ====================================================== -->
+
+    <script src="dashboard.js"></script>
+
+
+    <!-- =====================================================
+         SIDEBAR CONTROL
+         Directly inside HTML so it definitely works
+    ====================================================== -->
+
+    <script>
+
+        function toggleSidebar() {
+
+            document.body.classList.toggle(
+                "sidebar-collapsed"
+            );
+
+        }
+
+
+        function closeSidebarMenu() {
+
+            document.body.classList.remove(
+                "sidebar-open"
+            );
+
+        }
+
+
+        /* Mobile sidebar */
+
+        window.addEventListener("resize", function () {
+
+            if (window.innerWidth > 900) {
+
+                document.body.classList.remove(
+                    "sidebar-open"
+                );
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

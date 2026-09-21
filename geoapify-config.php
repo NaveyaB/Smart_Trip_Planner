@@ -1,0 +1,6 @@
+<?php
+
+$GEOAPIFY_API_KEY = "9069a97d3a224d0faf736901281469eb";
+$pexelsApiKey = "xEAfqDlO25HqwSKPQe287dUAFHbpkSNsNi354euXS52bHP1J7p49SBzc";
+
+?>
